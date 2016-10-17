@@ -128,6 +128,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, WebFrameLoadDelegate, NSText
         self.defaultChart()
     }
 
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        self.window.makeKeyAndOrderFront(self)
+        return true
+    }
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
